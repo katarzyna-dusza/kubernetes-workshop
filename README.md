@@ -7,8 +7,12 @@ Kubernetes Workshop training.
 
 Install AWS CLI and kubectl tools.
 
-- kubectl
-- awscli
+- [kubectl](https://kubernetes.io/docs/tasks/tools/)
+- [awscli](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html)
+
+## Fallback
+
+Install minikube and VirtualBox following [these steps](https://github.com/katarzyna-dusza/k8s-medium).
 
 
 ## List of Exercises
