@@ -14,7 +14,7 @@ metadata:
 spec:
   selector:
     application: CHANGE_ME
-  type: ClusterIP
+  type: NodePort
   ports:
   - protocol: TCP
     port: 80

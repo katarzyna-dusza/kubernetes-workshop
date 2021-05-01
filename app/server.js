@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 
-const htmlPath = __dirname + '/index.html'
+const USER_NAME = process.env.USER_NAME
 let count = 1
 
 const logRequest = () => {
@@ -11,7 +11,9 @@ const logRequest = () => {
 
 app.get('/', (req, res) => {
     logRequest()
-    res.sendFile(htmlPath)
+    res.send(`<html><style>body { background-color: aquamarine; text-align: center; } </style><body><h1>Your App is working, ${USER_NAME}!</h1></body></html>`
+
+		)
 })
 
 app.get('/healthz', (req, res) => {

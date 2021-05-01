@@ -11,6 +11,11 @@ metadata:
   labels:
     application: CHANGE_ME
     training: kubernetes
+  annotations:
+    kubernetes.io/ingress.class: alb
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/group.name: group-name
 spec:
   rules:
   - host: "CHANGE_ME.kasia-dusza.de"
@@ -26,7 +31,7 @@ This Ingress definition declares:
 * Its `name`;
 * The public DNS `host`;
 * Its `backend`, defined by a `serviceName` and `servicePort`.
-
+* `group-name` - fill it out with a value provided by the trainer
 ## I. Create a Ingress Definition
 
 Create a file `ingress.yaml` with the contents in the example above and

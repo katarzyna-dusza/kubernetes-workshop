@@ -3,6 +3,6 @@ FROM node:14
 COPY . .
 RUN npm install
 
-EXPOSE 4000
+EXPOSE 3000
 
-CMD node server.js
+CMD USER_NAME=$USER node server.js
