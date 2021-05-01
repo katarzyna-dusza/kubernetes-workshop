@@ -1,0 +1,12 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: kubernetes-workshop-access
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: kubernetes-workshop-access
+subjects:
+- apiGroup: rbac.authorization.k8s.io
+  kind: User
+  name: arn:aws:iam::<AWS_ACOUNT_ID>:user/<USER_NAME> # USER_NAME - is the one defined in aws-auth

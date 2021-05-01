@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-example
+  annotations:
+    kubernetes.io/ingress.class: alb
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/group.name: <GROUP_NAME_IF_YOU_USED_MANAGED_NODES>
+spec:
+  rules:
+  - host: "hostname.example.com"
+    http:
+      paths:
+      - backend:
+          serviceName: <SERVICE_NAME>
+          servicePort: <SERVICE_PORT>
