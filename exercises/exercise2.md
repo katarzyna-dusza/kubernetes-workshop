@@ -24,6 +24,9 @@ spec:
       containers:
       - name: main
         image: nginx
+        env:
+        - name: USER
+          value: CHANGE_ME
         ports:
         - containerPort: 8080
         readinessProbe:
