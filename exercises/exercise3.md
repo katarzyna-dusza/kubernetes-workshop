@@ -18,7 +18,7 @@ spec:
   ports:
   - protocol: TCP
     port: 80
-    targetPort: 8080
+    targetPort: 3000
 ```
 
 This Service definition declares:
@@ -39,7 +39,7 @@ modify it to meet the following requirements:
 * Our service should be selectable through an `application` label with your
   username as the value;
 * We want to point our service to the Pods from our deployment;
-* Our Pods' `targetPort` is already 8080, so we can keep it.
+* Our Pods' `targetPort` is already 3000, so we can keep it.
 
 ## II. Create the Service
 
@@ -75,7 +75,7 @@ is truncated for brevity):
 $ kubectl describe service myapp
 Name:              myapp
 .
-Endpoints:         10.2.5.11:8080,10.2.7.27:8080,10.2.8.92:8080
+Endpoints:         10.2.5.11:3000,10.2.7.27:3000,10.2.8.92:3000
 .
 ```
 
