@@ -24,6 +24,7 @@
 
       1. Apply example cluer role: `kubectl apply -f cluster-role.yaml`
       2. Apply example cluster role binding: `kubectl apply -f cluster-role-binding.yaml`
+      3. Apply example pod resource quota if you don't want to create too many Pods: `kubectl apply -f pod-resource-quota.yaml`
 
 4. Deploy aws-load-balancer-controller. To do so, follow [this instruction](https://docs.aws.amazon.com/eks/latest/userguide/aws-load-balancer-controller.html). To install load balancer controller, use `v2_1_3_full.yaml` controller specification as `v2_2_0_full.yaml` doesn't work.
 
