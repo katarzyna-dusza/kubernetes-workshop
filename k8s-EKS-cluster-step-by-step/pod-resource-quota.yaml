@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: kubernetes-workshop-pod-counts
+spec:
+  hard:
+    pods: "MAX_NUMBER_OF_PODS"
