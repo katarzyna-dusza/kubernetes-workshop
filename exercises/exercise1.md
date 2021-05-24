@@ -45,6 +45,13 @@ spec:
       httpGet:
         path: /health
         port: 8080
+    resources:
+      requests:
+        cpu: "20m" # REQUESTED CPU: 20m cores
+        memory: "20M" # REQUESTED MEM: 20MB
+      limits:
+        cpu: 0.5 # MAX CPU USAGE: 0.5 core
+        memory: "20M" # MAX MEM USAGE: 20MB
 ```
 
 Create a file `pod.yaml` with the contents above. Update it with the following
